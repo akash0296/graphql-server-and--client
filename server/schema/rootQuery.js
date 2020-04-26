@@ -1,13 +1,13 @@
-const graphql = require("graphql");
+const graphql = require('graphql');
 const { GraphQLObjectType, GraphQLID, GraphQLList } = graphql;
 
-const Book = require("../models/book");
-const Author = require("../models/author");
-const { BookType, AuthorType } = require("./schemaTypes");
+const Book = require('../models/book');
+const Author = require('../models/author');
+const { BookType, AuthorType } = require('./typeDef');
 
 //Initial queries --- entry point of the defined graph of data
 const RootQuery = new GraphQLObjectType({
-  name: "RootQueryType",
+  name: 'RootQueryType',
   fields: {
     book: {
       type: BookType,
