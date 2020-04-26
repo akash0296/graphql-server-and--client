@@ -1,4 +1,4 @@
-const graphql = require("graphql");
+const graphql = require('graphql');
 const {
   GraphQLObjectType,
   GraphQLString,
@@ -7,16 +7,16 @@ const {
   GraphQLNonNull,
 } = graphql;
 
-const Book = require("../models/book");
-const Author = require("../models/author");
-const { BookType, AuthorType } = require("./schemaTypes");
+const Book = require('../models/book');
+const Author = require('../models/author');
+const { BookType, AuthorType } = require('./typeDef');
 
 /**
  * All data handling/manipulation are being done with mutations.
  * meaning -- all data creation/updation/deletion are done with mulation.
  */
 const Mutation = new GraphQLObjectType({
-  name: "Mutation",
+  name: 'Mutation',
   fields: {
     addAuthor: {
       type: AuthorType,
